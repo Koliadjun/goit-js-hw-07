@@ -26,9 +26,10 @@ const images = [
     },
 ];
 
-const galleryListRef = document.querySelector('#gallery');
+const galleryListEl = document.querySelector('#gallery');
+galleryListEl.classList.add('gallery')
 images.forEach((image) => {
-    galleryListRef.insertAdjacentHTML('beforeend', `<li><img src="${image.url}" alt="${image.alt}"></li>`);
+    galleryListEl.insertAdjacentHTML('beforeend', `<li class='gallery-item'><img src="${image.url}" alt="${image.alt}"></li>`);
 });
-galleryListRef.style.display = 'flex';
+
 
